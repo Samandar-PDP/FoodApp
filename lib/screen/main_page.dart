@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/model/bottom.dart';
+import 'package:food_app/screen/category_screen.dart';
 import 'package:food_app/widget/main_drawer.dart';
 
 class MainPage extends StatefulWidget {
@@ -17,7 +18,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       appBar: AppBar(title: Text(bottomList[_selectedIndex].label)),
       drawer: const MainDrawer(),
-      body: const Text("Text"),
+      body: const CategoryScreen(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         selectedItemColor: Theme.of(context).colorScheme.primary,
