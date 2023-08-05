@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:food_app/model/category.dart';
 import 'package:food_app/widget/category_item.dart';
 
+import 'meals_page.dart';
+
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({super.key});
 
@@ -18,7 +20,14 @@ class CategoryScreen extends StatelessWidget {
         ),
         itemCount: categoryList.length,
         itemBuilder: (context, index) {
-          return CategoryItem(category: categoryList[index]);
+          return CategoryItem(
+            category: categoryList[index],
+            onClick: (category) {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => MealsPage(category: category))
+              );
+            }
+          );
         },
       ),
     );

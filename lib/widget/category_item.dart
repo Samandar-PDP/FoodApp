@@ -2,14 +2,17 @@ import 'package:food_app/model/category.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
-  const CategoryItem({super.key, required this.category});
+  const CategoryItem({super.key, required this.category, required this.onClick});
 
   final Category category;
+  final void Function(Category category) onClick;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        onClick(category);
+      },
       splashColor: Colors.white,
       borderRadius: BorderRadius.circular(16),
       child: Container(

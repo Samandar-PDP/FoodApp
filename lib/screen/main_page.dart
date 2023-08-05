@@ -18,7 +18,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       appBar: AppBar(title: Text(bottomList[_selectedIndex].label)),
       drawer: const MainDrawer(),
-      body: const CategoryScreen(),
+      body: const CategoryScreen(),//Abduvali zor bola
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         selectedItemColor: Theme.of(context).colorScheme.primary,
