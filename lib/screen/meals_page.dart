@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/model/category.dart';
+import 'package:food_app/model/meal.dart';
+import 'package:food_app/widget/meal_item.dart';
 
 class MealsPage extends StatelessWidget {
   const MealsPage({super.key, required this.category});
@@ -12,6 +14,7 @@ class MealsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(category.title),
       ),
+      body: MealItem(meal: meals[0][0]),
     );
   }
 }
